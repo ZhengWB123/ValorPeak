@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValorPeak - 无畏契约专业代练 | 安全上分</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Microsoft YaHei', system-ui, sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                        url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+        }
+        .neon-purple { text-shadow: 0 0 15px rgb(168 85 247); }
+        
+        /* 移动端优化 */
+        @media (max-width: 768px) {
+            .hero-text { font-size: 2.5rem; line-height: 1.1; }
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100">
+
+    <!-- 导航栏 -->
+    <nav class="bg-black/95 backdrop-blur-md border-b border-purple-600 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center text-2xl font-bold">VP</div>
+                <div>
+                    <h1 class="text-2xl font-bold neon-purple">ValorPeak</h1>
+                    <p class="text-xs text-purple-400 -mt-1">无畏契约代练</p>
+                </div>
+            </div>
+
+            <!-- 电脑端菜单 -->
+            <div class="hidden md:flex items-center gap-8 text-base">
+                <a href="#services" class="hover:text-purple-400 transition">服务</a>
+                <a href="#price" class="hover:text-purple-400 transition">价格</a>
+                <a href="#reviews" class="hover:text-purple-400 transition">评价</a>
+                <a href="#faq" class="hover:text-purple-400 transition">FAQ</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <button onclick="contactKF()" 
+                        class="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 px-5 py-2.5 rounded-2xl font-medium flex items-center gap-2 text-sm md:text-base transition">
+                    <i class="fa-solid fa-headset"></i>
+                    <span>联系客服</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-7xl mx-auto px-5 py-20 md:py-0">
+            <div class="max-w-xl">
+                <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 text-sm">
+                    <span class="text-green-400 animate-pulse">●</span>
+                    <span>当前在线代练 138 人</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 hero-text">
+                    专业 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">无畏契约</span> 代练
+                </h1>
+                
+                <p class="text-lg md:text-2xl text-zinc-300 mb-10">
+                    最快2小时起单 · 账号安全保障<br>
+                    从青铜冲到Radiant
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="contactKF()" 
+                            class="bg-white text-black py-4 px-8 rounded-3xl text-lg font-bold hover:scale-105 transition flex items-center justify-center gap-3">
+                        <i class="fa-solid fa-rocket"></i>
+                        立即下单
+                    </button>
+                    <button onclick="document.getElementById('price').scrollIntoView({ behavior: 'smooth' })"
+                            class="border-2 border-white/70 py-4 px-8 rounded-3xl text-lg font-medium hover:bg-white/10 transition">
+                        查看价格
+                    </button>
+                </div>
+
+                <div class="mt-12 grid grid-cols-3 gap-4 text-center md:text-left">
+                    <div>
+                        <i class="fa-solid fa-shield-halved text-emerald-400 text-2xl"></i>
+                        <p class="text-sm mt-1">7天安全</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-clock text-amber-400 text-2xl"></i>
+                        <p class="text-sm mt-1">最快2小时</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-star text-yellow-400 text-2xl"></i>
+                        <p class="text-sm mt-1">4.98分</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <section id="services" class="py-16 md:py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">专业代练服务</h2>
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-zinc-800 p-8 rounded-3xl hover:-translate-y-3 transition-all">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-arrow-trend-up text-purple-400"></i>排位上分
+                    </h3>
+                    <p class="text-zinc-400">单排 / 双排 / 三排 · 指定段位冲分</p>
+                </div>
+                <div class="bg-zinc-800 p-8 rounded-3xl hover:-translate-y-3 transition-all">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-user-friends text-pink-400"></i>陪玩陪练
+                    </h3>
+                    <p class="text-zinc-400">实时语音 · 娱乐+上分结合</p>
+                </div>
+                <div class="bg-zinc-800 p-8 rounded-3xl hover:-translate-y-3 transition-all">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                        <i class="fa-solid fa-trophy text-yellow-400"></i>定制服务
+                    </h3>
+                    <p class="text-zinc-400">战令 / 皮肤 / 技术教学</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 价格表 -->
+    <section id="price" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">代练价格参考</h2>
+            <p class="text-center text-zinc-400 mb-10">实际以客服报价为准 · 支持议价</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div class="bg-zinc-800 rounded-3xl p-6 text-center">
+                    <div class="text-emerald-400">青铜 → 白银</div>
+                    <div class="text-4xl md:text-5xl font-bold my-4">¥<span class="text-2xl">80</span></div>
+                </div>
+                <div class="bg-zinc-800 rounded-3xl p-6 text-center border-2 border-purple-500 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-xs px-4 py-1 rounded-full">热卖</div>
+                    <div class="text-purple-400">白金 → 钻石</div>
+                    <div class="text-4xl md:text-5xl font-bold my-4">¥<span class="text-2xl">280</span></div>
+                </div>
+                <div class="bg-zinc-800 rounded-3xl p-6 text-center">
+                    <div class="text-amber-400">不朽 → 至尊</div>
+                    <div class="text-4xl md:text-5xl font-bold my-4">¥<span class="text-2xl">680</span></div>
+                </div>
+                <div class="bg-zinc-800 rounded-3xl p-6 text-center">
+                    <div>Radiant</div>
+                    <div class="text-4xl md:text-5xl font-bold my-4 text-purple-400">面议</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 悬浮联系按钮（手机友好） -->
+    <div onclick="contactKF()" 
+         class="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-gradient-to-br from-purple-600 to-pink-600 w-16 h-16 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/50 hover:scale-110 active:scale-95 transition z-50">
+        <i class="fa-solid fa-headset text-3xl"></i>
+    </div>
+
+    <footer class="bg-black py-10 text-center text-zinc-400 text-sm">
+        <p>© 2026 ValorPeak 无畏契约代练</p>
+        <p class="mt-2">24小时在线 · 微信 / QQ 客服</p>
+    </footer>
+
+    <script>
+        function contactKF() {
+            const wechat = "ValorPeak001";
+            alert(`✅ 客服微信号已复制：${wechat}\n\n请添加微信快速下单咨询`);
+            // 可选：自动复制到剪贴板
+            navigator.clipboard.writeText(wechat);
+        }
+
+        // 简单的 Tailwind 配置增强
+        tailwind.config = {
+            content: [],
+            theme: {
+                extend: {}
+            }
+        }
+    </script>
+</body>
+</html>
